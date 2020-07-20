@@ -1,5 +1,8 @@
 
 
 #Added by cargo
-
+*
 !**/*.cpp
+!**/*.lock
+!**/*.toml
+!**/*.md
