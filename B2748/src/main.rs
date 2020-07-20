@@ -1,5 +1,6 @@
 use std::io;
 
+static mut v: Vec<i64> = Vec::new();
 fn main() {
     let mut n = String::new();
     match io::stdin().read_line(&mut n) {
@@ -7,18 +8,30 @@ fn main() {
         Err(_) => {}
     }
 
-    let n: i32 = match n.trim().parse() {
+    let n: u64 = match n.trim().parse() {
         Ok(n) => n,
         Err(_) => 0,
     };
 
-    println!("{}", fibonacci(n));
+    unsafe {
+        for i in 0..n + 1 as u64 {
+            v.push(-1);
+        }
+
+        println!("{}", fibonacci(n));
+    }
 }
 
-fn fibonacci(n: i32) -> i32 {
+unsafe fn fibonacci(n: u64) -> u64 {
+    let n_size: usize = n as usize;
+    if v[n_size] != -1 {
+        return v[n_size] as u64;
+    }
     if n < 2 {
-        return n;
+        return n as u64;
     }
 
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    v[n_size] = (fibonacci(n - 1) + fibonacci(n - 2)) as i64;
+
+    return v[n_size] as u64;
 }
