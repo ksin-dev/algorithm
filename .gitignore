@@ -6,3 +6,7 @@
 !**/*.lock
 !**/*.toml
 !**/*.md
+!*/src/**/*
+!*/Cargo.lock
+!*/Cargo.toml
+!*/Cargo.md
