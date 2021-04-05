@@ -1,12 +1,11 @@
 
 
-#Added by cargo
-*
+**/*
+#Added by cargo\
+!/*
+!/*/src
 !**/*.cpp
 !**/*.lock
 !**/*.toml
 !**/*.md
-!*/src/**/*
-!*/Cargo.lock
-!*/Cargo.toml
-!*/Cargo.md
+!**/*.rs
