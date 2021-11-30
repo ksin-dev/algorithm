@@ -5,25 +5,28 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "g++-7 build and debug active file",
+      "name": "(lldb) Launch Debug",
+      "preLaunchTask": "Bazel Build (Debug)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}.runfiles/__main__",
       "environment": [],
       "externalConsole": false,
-      "MIMode": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "g++-7 build active file",
-      "miDebuggerPath": "/usr/bin/gdb"
+      "MIMode": "lldb"
+    },
+    {
+      "preLaunchTask": "Bazel Build (Debug)",
+      "name": "CodeLLDB",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "sourceMap": {
+        ".": "${workspaceFolder}"
+      },
     }
   ]
 }

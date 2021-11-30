@@ -1,0 +1,46 @@
+package(default_visibility = ["//visibility:public"])
+
+
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+
+cc_binary(
+  name = "graph",
+  srcs = ["graph.cpp"]
+)
+
+cc_binary(
+  name ="bst",
+  srcs =["bst.cpp"]
+)
+
+cc_binary(
+  name = "heap",
+  srcs =["heap.cpp"]
+)
+
+cc_binary(
+  name = "ntree",
+  srcs = ["ntree.cpp"]
+)
+
+
+cc_binary(
+  name = "adjacency_list",
+  srcs = ["adjacency_list.cpp"]
+)
+
+cc_binary(
+  name = "hash_map",
+  srcs = ["hash_map.cpp"]
+)
+
+cc_binary(
+  name = "hash_chaning",
+  srcs = ["hash_chaning.cpp"]
+)
+
+cc_binary(
+  name = "hash_cuckoo",
+  srcs = ["hash_cuckoo.cpp"]
+)
