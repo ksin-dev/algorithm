@@ -44,3 +44,18 @@ cc_binary(
   name = "hash_cuckoo",
   srcs = ["hash_cuckoo.cpp"]
 )
+
+cc_binary(
+  name = "hash_std",
+  srcs = ["hash_std.cpp"]
+)
+
+cc_binary(
+  name ="linear_search",
+  srcs = ["linear_search.cpp"]
+)
+
+cc_binary(
+  name ="merge_sort",
+  srcs = ["merge_sort.cpp"]
+)
