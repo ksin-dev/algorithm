@@ -59,3 +59,18 @@ cc_binary(
   name ="merge_sort",
   srcs = ["merge_sort.cpp"]
 )
+
+cc_binary(
+  name= "quick_sort",
+  srcs =["quick_sort.cpp"],
+  copts = ["-std=c++17"]
+
+)
+
+
+cc_binary(
+  name= "linear_time_selection",
+  srcs =["linear_time_selection.cpp"],
+  copts = ["-std=c++17"]
+
+)
