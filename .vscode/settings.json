@@ -82,7 +82,9 @@
     "unordered_set": "cpp",
     "cinttypes": "cpp",
     "iomanip": "cpp",
-    "filesystem": "cpp"
+    "filesystem": "cpp",
+    "valarray": "cpp",
+    "*.ipp": "cpp"
   },
   "C_Cpp.dimInactiveRegions": false,
   "C_Cpp.errorSquiggles": "Enabled"

@@ -3,6 +3,19 @@ package(default_visibility = ["//visibility:public"])
 
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
+load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
+
+# boost_deps() will re-download the tarball every time BUILD.boost
+# changes, which is frustrating for doing development. Download it
+# yourself, uncomment the below and change the path as appropriate
+# for a faster iteration cycle on changes.
+#
+# new_local_repository(
+#     name = "boost",
+#     build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",
+#     path = "/home/nelhage/code/boost_1_71_0/",
+# )
+
 
 cc_binary(
   name = "graph",
@@ -72,5 +85,28 @@ cc_binary(
   name= "linear_time_selection",
   srcs =["linear_time_selection.cpp"],
   copts = ["-std=c++17"]
-
 )
+
+cc_binary(
+  name = "map_reduce",
+  srcs = ["map_reduce.cpp"],
+  copts = ["-std=c++17"]
+)
+
+cc_binary(
+  name = "prime_calculator",
+  srcs = glob(
+    ["prime_calculator.cpp","include/**/*.hpp"],
+  ),
+  copts = ["-std=c++17"],
+  deps = [
+    "@boost//:filesystem",
+    "@boost//:iterator",
+    "@boost//:iostreams",
+    "@boost//:functional",
+    "@boost//:config",
+    "@boost//:system",
+  ]
+)
+
+
