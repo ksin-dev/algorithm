@@ -109,4 +109,27 @@ cc_binary(
   ]
 )
 
+cc_binary(
+  name = "compute_waiting_times",
+  srcs = [
+    "compute_waiting_times.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
 
+cc_binary(
+  name = "fractional_knapsack_problem",
+  srcs = [
+    "fractional_knapsack_problem.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
+
+
+cc_binary(
+  name = "job_scheduling",
+  srcs = [
+    "job_scheduling.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
