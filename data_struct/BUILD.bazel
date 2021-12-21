@@ -133,3 +133,11 @@ cc_binary(
   ],
   copts = ["-std=c++17"]
 )
+
+cc_binary(
+  name = "mst",
+  srcs = [
+    "mst.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
