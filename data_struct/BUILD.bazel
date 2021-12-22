@@ -149,3 +149,10 @@ cc_binary(
   ],
   copts = ["-std=c++17"]
 )
+cc_binary(
+  name = "welsh_powell",
+  srcs = [
+    "welsh_powell.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
