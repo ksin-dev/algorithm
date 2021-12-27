@@ -156,3 +156,11 @@ cc_binary(
   ],
   copts = ["-std=c++17"]
 )
+
+cc_binary(
+  name = "graph_bfs",
+  srcs = [
+    "graph_bfs.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
