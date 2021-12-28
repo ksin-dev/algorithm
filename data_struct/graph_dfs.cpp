@@ -2,6 +2,7 @@
 #include <iostream>
 #include <set>
 #include <map>
+#include <stack>
 #include <queue>
 
 using namespace std;
@@ -95,22 +96,21 @@ auto create_reference_graph()
 }
 
 template <typename T>
-auto breadth_first_search(const Graph<T> &G, unsigned start)
+auto depth_first_search(const Graph<T> &G, unsigned start)
 {
-  queue<unsigned> queue;
+  stack<unsigned> stack;
   set<unsigned> visited;
   vector<unsigned> visit_order;
 
-  queue.push(start);
+  stack.push(start);
 
-  while (!queue.empty())
+  while (!stack.empty())
   {
-    auto current_vertex = queue.front();
-    queue.pop();
+    auto current_vertex = stack.top();
+    stack.pop();
 
     if (visited.find(current_vertex) == visited.end())
     {
-
       visited.insert(current_vertex);
       visit_order.push_back(current_vertex);
 
@@ -118,7 +118,7 @@ auto breadth_first_search(const Graph<T> &G, unsigned start)
       {
         if (visited.find(e.dst) == visited.end())
         {
-          queue.push(e.dst);
+          stack.push(e.dst);
         }
       }
     }
@@ -135,9 +135,9 @@ int main()
   cout << "[입력 그래프]" << endl;
   cout << G << endl;
 
-  cout << "[BFS 방문 순서]" << endl;
+  cout << "[DFS 방문 순서]" << endl;
 
-  auto bfs_visit_order = breadth_first_search(G, 1);
+  auto bfs_visit_order = depth_first_search(G, 1);
 
   for (auto v : bfs_visit_order)
     cout << v << endl;
