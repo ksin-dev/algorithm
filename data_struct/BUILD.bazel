@@ -173,3 +173,12 @@ cc_binary(
   copts = ["-std=c++17"]
 )
 
+cc_binary(
+  name = "bipartite_graph",
+  srcs = [
+    "bipartite_graph.cpp"
+  ],
+  copts = ["-std=c++17"]
+)
+
+
