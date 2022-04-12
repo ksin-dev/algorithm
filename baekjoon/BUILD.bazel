@@ -44,6 +44,11 @@ cc_binary(
   srcs = ["1034.cpp"]
 )
 
+cc_binary(
+  name = "10430",
+  srcs = ["10430.cpp"]
+)
+
 
 
 
