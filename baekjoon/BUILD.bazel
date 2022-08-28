@@ -1,0 +1,59 @@
+package(default_visibility = ["//visibility:public"])
+
+
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
+
+# boost_deps() will re-download the tarball every time BUILD.boost
+# changes, which is frustrating for doing development. Download it
+# yourself, uncomment the below and change the path as appropriate
+# for a faster iteration cycle on changes.
+#
+# new_local_repository(
+#     name = "boost",
+#     build_file = "@com_github_nelhage_rules_boost//:BUILD.boost",
+#     path = "/home/nelhage/code/boost_1_71_0/",
+# )
+
+
+cc_binary(
+  name = "1009",
+  srcs = ["1009.cpp"]
+)
+
+
+cc_binary(
+  name = "1149",
+  srcs = ["1149.cpp"]
+)
+
+cc_binary(
+  name = "1013",
+  srcs = ["1013.cpp"]
+)
+
+cc_binary(
+  name = "1025",
+  srcs = ["1025.cpp"]
+)
+
+
+cc_binary(
+  name = "1034",
+  srcs = ["1034.cpp"]
+)
+
+cc_binary(
+  name = "10430",
+  srcs = ["10430.cpp"]
+)
+
+cc_binary(
+  name = "4375",
+  srcs = ["4375.cpp"]
+)
+
+
+
+
