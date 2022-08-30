@@ -20,3 +20,10 @@ cc_binary(
   srcs = ["sort_the_matrix_diagonally.cpp"]
 )
 
+
+cc_binary(
+  name = "rotate_image",
+  srcs = ["rotate_image.cpp"]
+)
+
+
