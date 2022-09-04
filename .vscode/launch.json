@@ -15,7 +15,19 @@
       "cwd": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}.runfiles/__main__",
       "environment": [],
       "externalConsole": false,
-      "MIMode": "lldb"
+      "MIMode": "gdb",
+      "linux": {
+        "sourceFileMap": {
+          "/proc/self/cwd": "${workspaceFolder}",
+        }
+      },
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
     },
     {
       "preLaunchTask": "Bazel Build (Debug)",

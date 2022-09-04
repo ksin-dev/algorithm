@@ -27,3 +27,17 @@ cc_binary(
 )
 
 
+cc_binary(
+  name = "numbers_with_same_consective_differences",
+  copts = ["-std=c++17"],
+  srcs = ["numbers_with_same_consective_differences.cpp"]
+)
+
+
+
+cc_binary(
+  name = "vertical_order_traversal_of_a_binary_tree",
+  copts = ["-std=c++17"],
+  srcs = ["vertical_order_traversal_of_a_binary_tree.cpp"]
+)
+
