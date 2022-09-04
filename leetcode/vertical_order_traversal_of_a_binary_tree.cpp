@@ -36,9 +36,9 @@ public:
   {
     vector<vector<tuple<int, int>>> v;
     auto depth = get_depth(root);
-    v.assign(pow(2, depth), vector<tuple<int, int>>());
+    v.assign(depth + 1, vector<tuple<int, int>>());
 
-    tree_to_vector(v, root, 0, 0);
+    find_answer(v, root, 0, 0);
 
     vector<vector<int>> newV;
 
@@ -65,7 +65,7 @@ public:
     return newV;
   }
 
-  void tree_to_vector(vector<vector<tuple<int, int>>> &v, TreeNode *root, int left, int right)
+  void find_answer(vector<vector<tuple<int, int>>> &v, TreeNode *root, int left, int right)
   {
     auto mid = v.size() / 2;
     if (root == nullptr)
@@ -73,8 +73,8 @@ public:
       return;
     }
     v[mid + (right - left)].push_back(make_tuple(left + right, root->val));
-    tree_to_vector(v, root->right, left, right + 1);
-    tree_to_vector(v, root->left, left + 1, right);
+    find_answer(v, root->right, left, right + 1);
+    find_answer(v, root->left, left + 1, right);
 
     return;
   }
