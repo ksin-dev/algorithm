@@ -55,3 +55,8 @@ rust_test(
   args = []
 )
 
+cc_binary(
+  name = "n_ary_tree_level_order_traversal",
+  srcs = ["n_ary_tree_level_order_traversal.cpp"]
+)
+
