@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <tuple>
 
+// link =https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
 using namespace std;
 
 void print(vector<vector<int>> &v)

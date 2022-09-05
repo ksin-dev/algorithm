@@ -1,18 +1,27 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+
+########### RUST SETUP START ###################################
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "rules_rust",
-    sha256 = "531bdd470728b61ce41cf7604dc4f9a115983e455d46ac1d0c1632f613ab9fc3",
-    strip_prefix = "rules_rust-d8238877c0e552639d3e057aadd6bfcf37592408",
+    sha256 = "0cc7e6b39e492710b819e00d48f2210ae626b717a3ab96e048c43ab57e61d204",
     urls = [
-        # `main` branch as of 2021-08-23
-        "https://github.com/bazelbuild/rules_rust/archive/d8238877c0e552639d3e057aadd6bfcf37592408.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/rules_rust/releases/download/0.10.0/rules_rust-v0.10.0.tar.gz",
+        "https://github.com/bazelbuild/rules_rust/releases/download/0.10.0/rules_rust-v0.10.0.tar.gz",
     ],
 )
 
-load("@rules_rust//rust:repositories.bzl", "rust_repositories")
+load("@rules_rust//rust:repositories.bzl", "rules_rust_dependencies", "rust_register_toolchains")
 
-rust_repositories()
+rules_rust_dependencies()
+
+rust_register_toolchains()
+
+########### RUST SETUP END ###################################
+
+
+########### CPP SETUP START ###################################
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
@@ -26,6 +35,7 @@ git_repository(
 load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
 boost_deps()
 
+########### CPP SETUP END  ###################################
 
 
 # http_archive(

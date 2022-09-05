@@ -2,7 +2,7 @@ package(default_visibility = ["//visibility:public"])
 
 
 load("@rules_cc//cc:defs.bzl", "cc_binary")
-
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc","rust_test")
 # boost_deps() will re-download the tarball every time BUILD.boost
 # changes, which is frustrating for doing development. Download it
 # yourself, uncomment the below and change the path as appropriate
@@ -39,5 +39,19 @@ cc_binary(
   name = "vertical_order_traversal_of_a_binary_tree",
   copts = ["-std=c++17"],
   srcs = ["vertical_order_traversal_of_a_binary_tree.cpp"]
+)
+
+rust_binary(
+  name = "running_sum_of_1d_array",
+  srcs = ["running_sum_of_1d_array.rs"],
+  edition = "2018",
+  args = []
+)
+
+rust_test(
+  name = "find_pivot_index",
+  srcs = ["find_pivot_index.rs"],
+  edition = "2018",
+  args = []
 )
 

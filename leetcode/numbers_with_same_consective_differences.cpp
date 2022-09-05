@@ -3,6 +3,8 @@
 #include <cmath>
 #include <algorithm>
 #include <string>
+
+// link =https://leetcode.com/problems/numbers-with-same-consecutive-differences/
 using namespace std;
 
 void print(vector<int> &v)

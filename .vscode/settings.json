@@ -108,5 +108,33 @@
     "__functional_03": "cpp"
   },
   "C_Cpp.dimInactiveRegions": false,
-  "C_Cpp.errorSquiggles": "Disabled"
+  "C_Cpp.errorSquiggles": "Disabled",
+  "terminal.integrated.env.linux": {
+    "HOME": "${env:HOME}"
+  },
+  "terminal.integrated.env.osx": {
+    "HOME": "${env:HOME}"
+  },
+  "rust-analyzer.linkedProjects": [
+    {
+      "sysroot_src": "/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+      "crates": [
+        {
+          "root_module": "leetcode/running_sum_of_1d_array.rs",
+          "edition": "2018",
+          "deps": [],
+        }
+      ]
+    },
+    {
+      "sysroot_src": "/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+      "crates": [
+        {
+          "root_module": "leetcode/find_pivot_index.rs",
+          "edition": "2018",
+          "deps": [],
+        }
+      ]
+    }
+  ]
 }
