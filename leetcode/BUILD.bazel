@@ -60,3 +60,9 @@ cc_binary(
   srcs = ["n_ary_tree_level_order_traversal.cpp"]
 )
 
+rust_binary(
+  name = "binary_tree_pruning",
+  srcs = ["binary_tree_pruning.rs"],
+  edition="2021"
+)
+
