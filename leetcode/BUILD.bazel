@@ -66,3 +66,7 @@ rust_binary(
   edition="2021"
 )
 
+cc_binary(
+  name = "construct_string_from_binary_tree",
+  srcs = ["construct_string_from_binary_tree.cpp"]
+)
