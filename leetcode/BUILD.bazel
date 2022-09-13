@@ -75,3 +75,8 @@ cc_binary(
   name = "utf_8_validation",
   srcs = ["utf_8_validation.cpp"]
 )
+
+cc_binary(
+  name = "binary_tree_inorder_traversal",
+  srcs = ["binary_tree_inorder_traversal.cpp"]
+)
