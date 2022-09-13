@@ -70,3 +70,8 @@ cc_binary(
   name = "construct_string_from_binary_tree",
   srcs = ["construct_string_from_binary_tree.cpp"]
 )
+
+cc_binary(
+  name = "utf_8_validation",
+  srcs = ["utf_8_validation.cpp"]
+)
