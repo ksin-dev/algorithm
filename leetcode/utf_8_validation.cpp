@@ -47,18 +47,20 @@ public:
     }
 
     bool validUtf8(vector<int>::iterator begin, vector<int>::iterator end) {
-        if(distance(begin,end) <= 0) return true;
-        bool success = false;
-        auto start = begin;
-        for(auto& cons:CONDITIONS) {
-            start = begin;
-            success = valid(start,end,cons);
-            if(success) break;
+        while(distance(begin,end) > 0){
+            auto start = begin;
+            auto success = false;
+            for(auto& cons:CONDITIONS) {
+                start = begin;
+                success = valid(start,end,cons);
+                if(success) {
+                    begin = start;
+                    break;
+                };
+            }
+            if(!success) return false;
         }
-
-        if(!success) return false;
-
-        return validUtf8(start,end);
+        return true;
     }
 
     bool valid(vector<int>::iterator& start,vector<int>::iterator& end,vector<pair<int,int>>& cons) {
