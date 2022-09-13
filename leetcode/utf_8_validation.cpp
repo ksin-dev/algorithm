@@ -52,12 +52,8 @@ public:
         auto start = begin;
         for(auto& cons:CONDITIONS) {
             start = begin;
-            if(cons.size() > distance(start,end)) continue;
-            success = valid(start,cons);
-            if(success) {
-                success = true;
-                break;
-            };
+            success = valid(start,end,cons);
+            if(success) break;
         }
 
         if(!success) return false;
@@ -65,7 +61,8 @@ public:
         return validUtf8(start,end);
     }
 
-    bool valid(vector<int>::iterator& start,vector<pair<int,int>>& cons) {
+    bool valid(vector<int>::iterator& start,vector<int>::iterator& end,vector<pair<int,int>>& cons) {
+        if(distance(start,end) < cons.size()) return false;
         for(auto& con: cons) {
             if((*start < con.first) || (*start > (con.first + con.second))) 
             {
