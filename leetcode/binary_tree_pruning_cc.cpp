@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+// link : https://leetcode.com/problems/binary-tree-pruning/
 struct TreeNode
 {
   int val;

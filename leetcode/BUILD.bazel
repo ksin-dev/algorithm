@@ -80,3 +80,10 @@ cc_binary(
   name = "binary_tree_inorder_traversal",
   srcs = ["binary_tree_inorder_traversal.cpp"]
 )
+
+
+
+cc_binary(
+  name = "the_number_of_weak",
+  srcs = ["the_number_of_weak.cpp"]
+)
