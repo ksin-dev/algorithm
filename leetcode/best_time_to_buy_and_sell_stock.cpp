@@ -2,6 +2,8 @@
 #include <vector>
 #include <limits>
 #include <cmath>
+#include <algorithm>
+#include <iterator>
 
 // link = https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 
@@ -10,30 +12,52 @@ using namespace std;
 class Solution {
 public:
     int maxProfit(int k, vector<int>& prices) {
-        return maxProfit(k,prices.begin(),prices.end());
-    }
+        if(prices.size() == 0 || prices.size() == 1) return 0;
 
-    int maxProfit(int k, vector<int>::iterator begin,vector<int>::iterator end,int profit=0)
-    {
-        if(k == 0 || distance(begin,end) < 2) return profit;
-        auto start = begin+1;
-        auto buy = begin;
-        auto sell = start;
-        while(distance(start,end) > 0  || (*sell < *start)) {
-            if(*buy > *start) 
+        vector<int> gaps;
+        int sum = 0;
+        for(auto it = prices.begin()+1;it != prices.end();it=next(it,1))
+        {
+            auto prev = std::prev(it,1);
+            if(*it - *prev >= 0)
             {
-                buy = start;
-                sell = start;
+                if(sum >= 0 )
+                {
+                    sum += (*it - *prev);
+                }   
+                else
+                {
+                    gaps.push_back(sum);
+                    sum = (*it - *prev);
+                }
             }
-
-            if(*sell < *start (*buy < *start && sell == end)){
-                sell = start;
+            else 
+            {
+                if(sum > 0 )
+                {
+                    gaps.push_back(sum);
+                    sum = (*it - *prev);
+                }
+                else 
+                {
+                    sum += (*it - *prev);
+                }
             }
         }
-        profit = maxProfit(k-1,start,end,profit);
-        
+        if(sum !=0)
+        {
+            gaps.push_back(sum);
+        }
 
+        for(auto& gap:gaps)
+        {
+            cout << gap << '\t';
+        }
+        cout <<endl;
+        return 0;
     }
+
+
 
 };
 
@@ -60,7 +84,7 @@ void case2() {
 }
 
 
-void case2() {
+void case3() {
     Solution s;
 
     auto v = vector<int> {
@@ -71,8 +95,21 @@ void case2() {
 
 }
 
+void case4() {
+    Solution s;
+
+    auto v = vector<int> {
+        0,2,6,7,0,8,5,7
+    };
+
+    cout << s.maxProfit(2,v) << endl;
+
+}
+
 int main() {
     case1();
     case2();
+    case3();
+    case4();
     return 0;
 }
