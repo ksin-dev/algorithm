@@ -87,3 +87,10 @@ cc_binary(
   name = "the_number_of_weak",
   srcs = ["the_number_of_weak.cpp"]
 )
+
+
+cc_binary(
+  name = "find_original_array_from_doubled_array",
+  copts = ["-std=c++17"],
+  srcs = ["find_original_array_from_doubled_array.cpp"]
+)
