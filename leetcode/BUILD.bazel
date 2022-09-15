@@ -101,3 +101,18 @@ cc_binary(
   copts = ["-std=c++17"],
   srcs = ["maximum_performance_of_a_team.cpp"]
 )
+
+
+
+cc_binary(
+  name = "fibonacci_number",
+  copts = ["-std=c++17"],
+  srcs = ["fibonacci_number.cpp"]
+)
+
+cc_binary(
+  name = "n_th_tribonacci_number",
+  copts = ["-std=c++17"],
+  srcs = ["n_th_tribonacci_number.cpp"]
+)
+
