@@ -116,3 +116,9 @@ cc_binary(
   srcs = ["n_th_tribonacci_number.cpp"]
 )
 
+
+cc_binary(
+  name = "maximum_score_from_performing_multiplication_operations",
+  copts = ["-std=c++17"],
+  srcs = ["maximum_score_from_performing_multiplication_operations.cpp"]
+)
