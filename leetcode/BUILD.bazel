@@ -127,3 +127,12 @@ cc_test(
 )
 
 
+cc_test(
+  name = "largest_perimeter_triangle",
+  copts = ["-std=c++17"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+  srcs = ["largest_perimeter_triangle.cpp"]
+)
+
