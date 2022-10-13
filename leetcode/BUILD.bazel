@@ -1,7 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 
-load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_cc//cc:defs.bzl", "cc_binary","cc_test")
 load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc","rust_test")
 # boost_deps() will re-download the tarball every time BUILD.boost
 # changes, which is frustrating for doing development. Download it
@@ -115,4 +115,15 @@ cc_binary(
   copts = ["-std=c++17"],
   srcs = ["n_th_tribonacci_number.cpp"]
 )
+
+
+cc_test(
+  name = "delete_node_in_a_linked_list",
+  copts = ["-std=c++17"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+  srcs = ["delete_node_in_a_linked_list.cpp"]
+)
+
 
