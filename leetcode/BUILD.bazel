@@ -147,3 +147,8 @@ cc_test(
   srcs = ["delete_the_middle_node_of_linked_list.cpp"]
 )
 
+cc_binary(
+  name = "climbing_stairs",
+  copts = ["-std=c++17"],
+  srcs = ["climbing_stairs.cpp"]
+)
