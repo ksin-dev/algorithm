@@ -136,3 +136,14 @@ cc_test(
   srcs = ["largest_perimeter_triangle.cpp"]
 )
 
+
+
+cc_test(
+  name = "delete_the_middle_node_of_linked_list",
+  copts = ["-std=c++17"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+  srcs = ["delete_the_middle_node_of_linked_list.cpp"]
+)
+
