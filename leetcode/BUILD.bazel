@@ -152,3 +152,9 @@ cc_binary(
   copts = ["-std=c++17"],
   srcs = ["climbing_stairs.cpp"]
 )
+
+cc_binary(
+  name = "minimum_difficulty_of_a_job_schedule",
+  copts = ["-std=c++17"],
+  srcs = ["minimum_difficulty_of_a_job_schedule.cpp"]
+)
