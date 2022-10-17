@@ -158,3 +158,15 @@ cc_binary(
   copts = ["-std=c++17"],
   srcs = ["minimum_difficulty_of_a_job_schedule.cpp"]
 )
+
+
+cc_binary(
+  name = "check_if_the_sentence_is_pangram",
+  copts = ["-std=c++17"],
+  srcs = ["check_if_the_sentence_is_pangram.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
+
+
