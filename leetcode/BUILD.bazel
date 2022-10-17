@@ -170,3 +170,24 @@ cc_binary(
 )
 
 
+
+
+
+cc_test(
+  name = "house_robber",
+  copts = ["-std=c++17"],
+  srcs = ["house_robber.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
+
+cc_test(
+  name = "house_robber2",
+  copts = ["-std=c++17"],
+  srcs = ["house_robber2.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
+
