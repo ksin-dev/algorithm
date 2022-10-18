@@ -191,3 +191,13 @@ cc_test(
   ],
 )
 
+
+
+cc_test(
+  name = "count_and_say",
+  copts = ["-std=c++17"],
+  srcs = ["count_and_say.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
