@@ -201,3 +201,31 @@ cc_test(
     "@googletest//:gtest_main"
   ],
 )
+
+cc_test(
+  name = "jump_game",
+  copts = ["-std=c++17"],
+  srcs = ["jump_game.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
+
+cc_test(
+  name = "jump_game2",
+  copts = ["-std=c++17"],
+  srcs = ["jump_game2.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
+
+
+cc_test(
+  name = "top_k_frequent_words",
+  copts = ["-std=c++17"],
+  srcs = ["top_k_frequent_words.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
