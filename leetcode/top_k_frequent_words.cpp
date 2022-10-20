@@ -1,39 +1,53 @@
 #include <iostream>
 #include "gtest/gtest.h"
 #include <map>
+#include <queue>
 
 using namespace std;
+using string_counter = pair<string, int>;
+struct pair_less_count
+{
+  bool operator()(string_counter &x, string_counter &y)
+  {
+    if (x.second == y.second)
+      return x.first > y.first;
+    else
+      return x.second < y.second;
+  }
+};
 
 class Solution
 {
 public:
   vector<string> topKFrequent(vector<string> &words, int k)
   {
-    map<string, int> m;
-    vector<pair<string, int>> v;
+    priority_queue<string_counter, vector<string_counter>, pair_less_count> q;
+    string s;
+
     vector<string> res;
+    int count = 0;
+    sort(words.begin(), words.end());
 
-    for (auto str : words)
+    for (auto &str : words)
     {
-      if (m.find(str) == m.end())
-        m[str] = 1;
+      if (count == 0 || s == str)
+      {
+        count++;
+      }
       else
-        m[str]++;
+      {
+        q.push(make_pair(s, count));
+        count = 1;
+      }
+      s = str;
     }
+    q.push(make_pair(s, count));
 
-    for (auto &p : m)
+    while (k--)
     {
-      v.push_back(p);
+      res.push_back(q.top().first);
+      q.pop();
     }
-
-    sort(v.begin(), v.end(), [](pair<string, int> &x, pair<string, int> &y)
-         {
-        if(x.second == y.second) return x.first < y.first;
-        else return x.second > y.second; });
-
-    transform(v.begin(), next(v.begin(), k), back_inserter(res), [](pair<string, int> &p)
-              { return p.first; });
-
     return res;
   }
 };
