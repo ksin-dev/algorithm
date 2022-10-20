@@ -36,7 +36,9 @@ public:
       num = num % val;
 
       while (count--)
+      {
         s += str;
+      }
     }
 
     return s;
