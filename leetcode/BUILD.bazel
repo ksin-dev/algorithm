@@ -229,3 +229,13 @@ cc_test(
     "@googletest//:gtest_main"
   ],
 )
+
+
+cc_test(
+  name = "integer_to_roman",
+  copts = ["-std=c++17"],
+  srcs = ["integer_to_roman.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
