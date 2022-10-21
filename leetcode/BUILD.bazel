@@ -249,3 +249,12 @@ cc_test(
     "@googletest//:gtest_main"
   ],
 )
+
+cc_test(
+  name = "contains_duplicate_2",
+  copts = ["-std=c++17"],
+  srcs = ["contains_duplicate_2.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
