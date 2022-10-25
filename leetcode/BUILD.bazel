@@ -267,3 +267,12 @@ cc_test(
     "@googletest//:gtest_main"
   ],
 )
+
+cc_test(
+  name = "set_mismatch",
+  copts = ["-std=c++17"],
+  srcs = ["set_mismatch.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
