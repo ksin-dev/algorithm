@@ -258,3 +258,22 @@ cc_test(
     "@googletest//:gtest_main"
   ],
 )
+
+
+cc_test(
+  name = "maximum_length_of_a_concatenated_string_with_unique_characters",
+  copts = ["-std=c++17"],
+  srcs = ["maximum_length_of_a_concatenated_string_with_unique_characters.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
+
+cc_test(
+  name = "where_will_the_ball_fall",
+  copts = ["-std=c++17"],
+  srcs = ["where_will_the_ball_fall.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
