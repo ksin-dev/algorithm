@@ -275,6 +275,14 @@ cc_test(
   srcs = ["where_will_the_ball_fall.cpp"],
   deps = [
     "@googletest//:gtest_main"
+  ]
+)
+cc_test(
+  name = "check_if_two_string_arrays_are_equivalent",
+  copts = ["-std=c++17"],
+  srcs = ["check_if_two_string_arrays_are_equivalent.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
   ],
 )
 
@@ -284,5 +292,13 @@ cc_test(
   srcs = ["minimum_genetic_mutaion.cpp"],
   deps = [
     "@googletest//:gtest_main"
-  ],
+  ]
+)
+cc_test(
+  name = "set_mismatch",
+  copts = ["-std=c++17"],
+  srcs = ["set_mismatch.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ]
 )
