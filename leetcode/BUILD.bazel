@@ -277,3 +277,12 @@ cc_test(
     "@googletest//:gtest_main"
   ],
 )
+
+cc_test(
+  name = "minimum_genetic_mutaion",
+  copts = ["-std=c++17"],
+  srcs = ["minimum_genetic_mutaion.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ],
+)
