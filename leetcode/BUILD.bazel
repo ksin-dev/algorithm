@@ -1,8 +1,9 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary","cc_test")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc","rust_test")
 package(default_visibility = ["//visibility:public"])
 
 
-load("@rules_cc//cc:defs.bzl", "cc_binary","cc_test")
-load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_doc","rust_test")
+
 # boost_deps() will re-download the tarball every time BUILD.boost
 # changes, which is frustrating for doing development. Download it
 # yourself, uncomment the below and change the path as appropriate
@@ -301,4 +302,12 @@ cc_test(
   deps = [
     "@googletest//:gtest_main"
   ]
+)
+
+
+rust_test(
+  name = "determine_if_string_halves_are_alike",
+  srcs = ["determine_if_string_halves_are_alike.rs"],
+  edition = "2018",
+  args = []
 )
