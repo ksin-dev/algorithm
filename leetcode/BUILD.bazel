@@ -311,3 +311,10 @@ rust_test(
   edition = "2018",
   args = []
 )
+
+rust_test(
+  name = "determine_if_two_strings_are_close",
+  srcs = ["determine_if_two_strings_are_close.rs"],
+  edition = "2018",
+  args = []
+)

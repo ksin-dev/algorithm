@@ -138,6 +138,11 @@
           "root_module": "leetcode/binary_tree_pruning.rs",
           "edition": "2021",
           "deps": [],
+        },
+        {
+          "root_module": "leetcode/determine_if_two_strings_are_close.rs",
+          "edition": "2021",
+          "deps": [],
         }
       ]
     },
@@ -161,6 +166,11 @@
         },
         {
           "root_module": "leetcode/binary_tree_pruning.rs",
+          "edition": "2021",
+          "deps": [],
+        },
+        {
+          "root_module": "leetcode/determine_if_two_strings_are_close.rs",
           "edition": "2021",
           "deps": [],
         }

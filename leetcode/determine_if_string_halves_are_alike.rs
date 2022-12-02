@@ -1,6 +1,7 @@
 
 static VOWELS: [char; 5] = ['a', 'e', 'i', 'o', 'u'];
 
+struct Solution{}
 impl Solution {
     pub fn count_vowels(s: &str) -> i32 {
         let mut count = 0;
