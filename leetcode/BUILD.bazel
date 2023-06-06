@@ -56,6 +56,15 @@ rust_test(
   args = []
 )
 
+rust_test(
+  name = "can_make_arithmetic_progression_from_sequence",
+  srcs = ["can_make_arithmetic_progression_from_sequence.rs"],
+  edition = "2018",
+  args = [
+  ]
+)
+
+
 cc_binary(
   name = "n_ary_tree_level_order_traversal",
   srcs = ["n_ary_tree_level_order_traversal.cpp"]
@@ -310,4 +319,13 @@ rust_test(
   srcs = ["determine_if_string_halves_are_alike.rs"],
   edition = "2018",
   args = []
+)
+
+cc_test(
+  name = "word_search_ii",
+  copts = ["-std=c++17"],
+  srcs = ["word_search_ii.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ]
 )
