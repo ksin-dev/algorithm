@@ -117,12 +117,12 @@
   },
   "rust-analyzer.linkedProjects": [
     {
-      "sysroot_src":"/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+      "sysroot_src": "/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
       "crates": [
         {
           "edition": "2021",
           "root_module": "leetcode/determine_if_string_halves_are_alike.rs",
-          "deps":[]
+          "deps": []
         },
         {
           "root_module": "leetcode/find_pivot_index.rs",
@@ -142,12 +142,12 @@
       ]
     },
     {
-      "sysroot_src":"/Users/hyukkim/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library",
+      "sysroot_src": "/Users/hyukkim/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library",
       "crates": [
         {
           "edition": "2021",
           "root_module": "leetcode/determine_if_string_halves_are_alike.rs",
-          "deps":[]
+          "deps": []
         },
         {
           "root_module": "leetcode/find_pivot_index.rs",
@@ -171,6 +171,16 @@
       "crates": [
         {
           "root_module": "leetcode/can_make_arithmetic_progression_from_sequence.rs",
+          "edition": "2021",
+          "deps": [],
+        }
+      ]
+    },
+    {
+      "sysroot_src": "/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+      "crates": [
+        {
+          "root_module": "leetcode/minimum_flips_to_make_a_or_b_equal_to_c.rs",
           "edition": "2021",
           "deps": [],
         }
