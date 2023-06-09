@@ -185,6 +185,26 @@
           "deps": [],
         }
       ]
+    },
+    {
+      "sysroot_src": "/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+      "crates": [
+        {
+          "root_module": "leetcode/count_negative_numbers_in_a_sorted_matrix.rs",
+          "edition": "2021",
+          "deps": [],
+        }
+      ]
+    },
+    {
+      "sysroot_src": "/home/ksin/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library",
+      "crates": [
+        {
+          "root_module": "leetcode/find_smallest_letter_greater_than_target.rs",
+          "edition": "2021",
+          "deps": [],
+        }
+      ]
     }
   ]
 }

@@ -82,6 +82,19 @@ rust_test(
   edition="2021"
 )
 
+
+rust_test(
+  name = "count_negative_numbers_in_a_sorted_matrix",
+  srcs = ["count_negative_numbers_in_a_sorted_matrix.rs"],
+  edition="2021"
+)
+
+rust_test(
+  name = "find_smallest_letter_greater_than_target",
+  srcs = ["find_smallest_letter_greater_than_target.rs"],
+  edition="2021"
+)
+
 cc_binary(
   name = "construct_string_from_binary_tree",
   srcs = ["construct_string_from_binary_tree.cpp"]
