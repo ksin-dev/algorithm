@@ -3,8 +3,6 @@ package(default_visibility = ["//visibility:public"])
 
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
-load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
-
 # boost_deps() will re-download the tarball every time BUILD.boost
 # changes, which is frustrating for doing development. Download it
 # yourself, uncomment the below and change the path as appropriate

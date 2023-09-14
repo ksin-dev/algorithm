@@ -2,18 +2,21 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 
 ########### RUST SETUP START ###################################
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "rules_rust",
-    sha256 = "324c2a86a8708d30475f324846b35965c432b63a35567ed2b5051b86791ce345",
-    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.13.0/rules_rust-v0.13.0.tar.gz"],
+    sha256 = "50272c39f20a3a3507cb56dcb5c3b348bda697a7d868708449e2fa6fb893444c",
+    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.22.0/rules_rust-v0.22.0.tar.gz"],
 )
 
 load("@rules_rust//rust:repositories.bzl", "rules_rust_dependencies", "rust_register_toolchains")
 
 rules_rust_dependencies()
 
+load("@rules_rust//tools/rust_analyzer:deps.bzl", "rust_analyzer_dependencies")
+
+rust_analyzer_dependencies()
 rust_register_toolchains()
+
 
 ########### RUST SETUP END ###################################
 
@@ -22,22 +25,28 @@ rust_register_toolchains()
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-git_repository(
+# Boost
+# Famous C++ library that has given rise to many new additions to the C++ Standard Library
+# Makes @boost available for use: For example, add `@boost//:algorithm` to your deps.
+# For more, see https://github.com/nelhage/rules_boost and https://www.boost.org
+http_archive(
     name = "com_github_nelhage_rules_boost",
-    commit = "fce83babe3f6287bccb45d2df013a309fa3194b8",
-    remote = "https://github.com/nelhage/rules_boost",
-    shallow_since = "1591047380 -0700",
-)
 
+    # Replace the commit hash in both places (below) with the latest, rather than using the stale one here.
+    # Even better, set up Renovate and let it do the work for you (see "Suggestion: Updates" in the README).
+    url = "https://github.com/nelhage/rules_boost/archive/96e9b631f104b43a53c21c87b01ac538ad6f3b48.tar.gz",
+    strip_prefix = "rules_boost-96e9b631f104b43a53c21c87b01ac538ad6f3b48",
+    # When you first run this tool, it'll recommend a sha256 hash to put here with a message like: "DEBUG: Rule 'com_github_nelhage_rules_boost' indicated that a canonical reproducible form can be obtained by modifying arguments sha256 = ..."
+)
 load("@com_github_nelhage_rules_boost//:boost/boost.bzl", "boost_deps")
 boost_deps()
 
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+# load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
-  name = "googletest",
-  remote = "https://github.com/google/googletest",
-  tag = "release-1.10.0",
+    name = "googletest",
+    remote = "https://github.com/google/googletest",
+    tag = "release-1.12.1",
 )
 
 ########### CPP SETUP END  ###################################
@@ -60,3 +69,4 @@ git_repository(
 #         sha256 = "da3411ea45622579d419bfda66f45cd0f8c32a181d84adfa936f5688388995cf",
 #         urls = ["https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz"],
 # )
+
