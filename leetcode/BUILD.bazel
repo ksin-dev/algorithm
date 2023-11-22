@@ -45,21 +45,21 @@ cc_binary(
 rust_binary(
   name = "running_sum_of_1d_array",
   srcs = ["running_sum_of_1d_array.rs"],
-  edition = "2018",
+  edition = "2021",
   args = []
 )
 
 rust_test(
   name = "find_pivot_index",
   srcs = ["find_pivot_index.rs"],
-  edition = "2018",
+  edition = "2021",
   args = []
 )
 
 rust_test(
   name = "can_make_arithmetic_progression_from_sequence",
   srcs = ["can_make_arithmetic_progression_from_sequence.rs"],
-  edition = "2018",
+  edition = "2021",
   args = [
   ]
 )
@@ -73,26 +73,26 @@ cc_binary(
 rust_binary(
   name = "binary_tree_pruning",
   srcs = ["binary_tree_pruning.rs"],
-  edition="2021"
+  edition="2018"
 )
 
 rust_test(
   name = "minimum_flips_to_make_a_or_b_equal_to_c",
   srcs = ["minimum_flips_to_make_a_or_b_equal_to_c.rs"],
-  edition="2021"
+  edition="2018"
 )
 
 
 rust_test(
   name = "count_negative_numbers_in_a_sorted_matrix",
   srcs = ["count_negative_numbers_in_a_sorted_matrix.rs"],
-  edition="2021"
+  edition="2018"
 )
 
 rust_test(
   name = "find_smallest_letter_greater_than_target",
   srcs = ["find_smallest_letter_greater_than_target.rs"],
-  edition="2021"
+  edition="2018"
 )
 
 cc_binary(
@@ -336,7 +336,7 @@ cc_test(
 rust_test(
   name = "determine_if_string_halves_are_alike",
   srcs = ["determine_if_string_halves_are_alike.rs"],
-  edition = "2018",
+  edition = "2021",
   args = []
 )
 
