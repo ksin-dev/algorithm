@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # load("@rules_foreign_cc//foreign_cc:boost_build.bzl", "boost_build")
 
 # boost_build(
@@ -10,5 +9,3 @@
 #     visibility = ["//visibility:public"],
 # )
 
-=======
->>>>>>> origin/master

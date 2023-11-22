@@ -42,58 +42,12 @@ cc_binary(
   srcs = ["vertical_order_traversal_of_a_binary_tree.cpp"]
 )
 
-rust_binary(
-  name = "running_sum_of_1d_array",
-  srcs = ["running_sum_of_1d_array.rs"],
-  edition = "2021",
-  args = []
-)
-
-rust_test(
-  name = "find_pivot_index",
-  srcs = ["find_pivot_index.rs"],
-  edition = "2021",
-  args = []
-)
-
-rust_test(
-  name = "can_make_arithmetic_progression_from_sequence",
-  srcs = ["can_make_arithmetic_progression_from_sequence.rs"],
-  edition = "2021",
-  args = [
-  ]
-)
-
 
 cc_binary(
   name = "n_ary_tree_level_order_traversal",
   srcs = ["n_ary_tree_level_order_traversal.cpp"]
 )
 
-rust_binary(
-  name = "binary_tree_pruning",
-  srcs = ["binary_tree_pruning.rs"],
-  edition="2018"
-)
-
-rust_test(
-  name = "minimum_flips_to_make_a_or_b_equal_to_c",
-  srcs = ["minimum_flips_to_make_a_or_b_equal_to_c.rs"],
-  edition="2018"
-)
-
-
-rust_test(
-  name = "count_negative_numbers_in_a_sorted_matrix",
-  srcs = ["count_negative_numbers_in_a_sorted_matrix.rs"],
-  edition="2018"
-)
-
-rust_test(
-  name = "find_smallest_letter_greater_than_target",
-  srcs = ["find_smallest_letter_greater_than_target.rs"],
-  edition="2018"
-)
 
 cc_binary(
   name = "construct_string_from_binary_tree",
@@ -333,13 +287,6 @@ cc_test(
 )
 
 
-rust_test(
-  name = "determine_if_string_halves_are_alike",
-  srcs = ["determine_if_string_halves_are_alike.rs"],
-  edition = "2021",
-  args = []
-)
-
 cc_test(
   name = "word_search_ii",
   copts = ["-std=c++17"],
@@ -354,14 +301,14 @@ cc_test(
 rust_binary(
   name = "binary_tree_pruning",
   srcs = ["binary_tree_pruning.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 
 
 rust_library(
   name = "minimum_flips_to_make_a_or_b_equal_to_c_lib",
   srcs = ["minimum_flips_to_make_a_or_b_equal_to_c.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 rust_test(
   name = "minimum_flips_to_make_a_or_b_equal_to_c",
@@ -372,7 +319,7 @@ rust_test(
 rust_library(
   name = "count_negative_numbers_in_a_sorted_matrix_lib",
   srcs = ["count_negative_numbers_in_a_sorted_matrix.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 
 rust_test(
@@ -384,7 +331,7 @@ rust_test(
 rust_library(
   name = "find_smallest_letter_greater_than_target_lib",
   srcs = ["find_smallest_letter_greater_than_target.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 rust_test(
   name = "find_smallest_letter_greater_than_target",
@@ -396,7 +343,7 @@ rust_test(
 rust_binary(
   name = "running_sum_of_1d_array",
   srcs = ["running_sum_of_1d_array.rs"],
-  edition = "2018",
+  edition = "2021",
   args = []
 )
 
@@ -404,7 +351,7 @@ rust_binary(
 rust_library(
   name = "find_pivot_index_lib",
   srcs = ["find_pivot_index.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 rust_test(
   name = "find_pivot_index",
@@ -415,7 +362,7 @@ rust_test(
 rust_library(
   name = "can_make_arithmetic_progression_from_sequence_lib",
   srcs = ["can_make_arithmetic_progression_from_sequence.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 rust_test(
   name = "can_make_arithmetic_progression_from_sequence",
@@ -427,7 +374,7 @@ rust_test(
 rust_library(
   name = "determine_if_string_halves_are_alike_lib",
   srcs = ["determine_if_string_halves_are_alike.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 
 rust_test(
@@ -440,12 +387,12 @@ rust_test(
 rust_test(
   name = "maximum_value_at_a_given_index_in_a_bounded_array",
   srcs = ["maximum_value_at_a_given_index_in_a_bounded_array.rs"],
-  edition = "2018"
+  edition = "2021"
 )
 
 
 rust_test(
   name = "lru_cache",
   srcs = ["lru_cache.rs"],
-  edition = "2018"
+  edition = "2021"
 )
