@@ -18,20 +18,23 @@
     {
       "label": "Generate rust-project.json",
       "command": "bazel",
-      "args": ["run", "@rules_rust//tools/rust_analyzer:gen_rust_project"],
+      "args": [
+        "run",
+        "@rules_rust//tools/rust_analyzer:gen_rust_project"
+      ],
       "options": {
-          "cwd": "${workspaceFolder}"
+        "cwd": "${workspaceFolder}"
       },
       "group": "build",
       "problemMatcher": [],
       "presentation": {
-          "reveal": "never",
-          "panel": "dedicated",
+        "reveal": "never",
+        "panel": "dedicated",
       },
       "runOptions": {
-          "runOn": "folderOpen"
+        "runOn": "folderOpen"
       }
-  },
+    },
   ],
   "version": "2.0.0"
 }

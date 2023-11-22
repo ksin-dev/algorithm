@@ -2,5 +2,6 @@ load("@rules_rust//rust:defs.bzl","rust_binary")
 
 rust_binary(
   name = "b2748",
-  srcs = ["src/main.rs"]
+  srcs = ["src/main.rs"],
+  edition="2018"
 )

@@ -2,4 +2,7 @@
 
 /bazel-*
 /include
+dist
 target
+
+rust-project.json

@@ -4,8 +4,13 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 ########### RUST SETUP START ###################################
 http_archive(
     name = "rules_rust",
+<<<<<<< HEAD
     sha256 = "36ab8f9facae745c9c9c1b33d225623d976e78f2cc3f729b7973d8c20934ab95",
     urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.31.0/rules_rust-v0.31.0.tar.gz"],
+=======
+    sha256 = "50272c39f20a3a3507cb56dcb5c3b348bda697a7d868708449e2fa6fb893444c",
+    urls = ["https://github.com/bazelbuild/rules_rust/releases/download/0.22.0/rules_rust-v0.22.0.tar.gz"],
+>>>>>>> origin/master
 )
 
 
@@ -13,6 +18,7 @@ load("@rules_rust//rust:repositories.bzl", "rules_rust_dependencies", "rust_regi
 
 rules_rust_dependencies()
 
+<<<<<<< HEAD
 rust_register_toolchains(
     edition = "2021",
     versions = [
@@ -23,6 +29,13 @@ rust_register_toolchains(
 load("@rules_rust//tools/rust_analyzer:deps.bzl", "rust_analyzer_dependencies")
 
 rust_analyzer_dependencies()
+=======
+load("@rules_rust//tools/rust_analyzer:deps.bzl", "rust_analyzer_dependencies")
+
+rust_analyzer_dependencies()
+rust_register_toolchains()
+>>>>>>> origin/master
+
 
 ########### RUST SETUP END ###################################
 
@@ -31,15 +44,15 @@ rust_analyzer_dependencies()
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
-git_repository(
+# Boost
+# Famous C++ library that has given rise to many new additions to the C++ Standard Library
+# Makes @boost available for use: For example, add `@boost//:algorithm` to your deps.
+# For more, see https://github.com/nelhage/rules_boost and https://www.boost.org
+http_archive(
     name = "com_github_nelhage_rules_boost",
-    commit = "fce83babe3f6287bccb45d2df013a309fa3194b8",
-    remote = "https://github.com/nelhage/rules_boost",
-    shallow_since = "1591047380 -0700",
-)
 
 
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+# load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
   name = "googletest",

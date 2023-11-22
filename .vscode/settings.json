@@ -109,10 +109,7 @@
   },
   "C_Cpp.dimInactiveRegions": false,
   "C_Cpp.errorSquiggles": "Disabled",
-  "terminal.integrated.env.linux": {
-    "HOME": "${env:HOME}"
-  },
-  "terminal.integrated.env.osx": {
-    "HOME": "${env:HOME}"
-  }
+  "rust-analyzer.linkedProjects": [
+    "rust-project.json"
+  ]
 }
