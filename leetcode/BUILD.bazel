@@ -396,3 +396,10 @@ rust_test(
   srcs = ["lru_cache.rs"],
   edition = "2021"
 )
+
+
+rust_test(
+  name = "diagonal_traverse_ii",
+  srcs = ["diagonal_traverse_ii.rs"],
+  edition = "2021"
+)
