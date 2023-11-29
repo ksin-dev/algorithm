@@ -396,3 +396,10 @@ rust_test(
   srcs = ["lru_cache.rs"],
   edition = "2021"
 )
+
+
+rust_test(
+  name = "number_of_1_bits",
+  srcs = ["number_of_1_bits.rs"],
+  edition = "2021"
+)
