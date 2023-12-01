@@ -9,10 +9,10 @@
       "preLaunchTask": "Bazel Build (Debug)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}",
+      "program": "${workspaceFolder}/dist/bin/${relativeFileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}.runfiles/__main__",
+      "cwd": "${workspaceFolder}/dist/bin/${relativeFileDirname}/${fileBasenameNoExtension}.runfiles/__main__",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
@@ -34,7 +34,7 @@
       "name": "CodeLLDB",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/bazel-bin/${relativeFileDirname}/${fileBasenameNoExtension}",
+      "program": "${workspaceFolder}/dist/bin/${relativeFileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "sourceMap": {
         ".": "${workspaceFolder}"

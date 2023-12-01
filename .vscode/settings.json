@@ -1,5 +1,7 @@
 {
   "files.associations": {
+    "*.ejs": "html",
+    "*.html.ts": "html",
     "array": "cpp",
     "typeinfo": "cpp",
     "limits": "cpp",
@@ -105,7 +107,10 @@
     "thread": "cpp",
     "typeindex": "cpp",
     "variant": "cpp",
-    "__functional_03": "cpp"
+    "__functional_03": "cpp",
+    "source_location": "cpp",
+    "rope": "cpp",
+    "slist": "cpp"
   },
   "C_Cpp.dimInactiveRegions": false,
   "C_Cpp.errorSquiggles": "Disabled",

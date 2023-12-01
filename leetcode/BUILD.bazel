@@ -297,6 +297,24 @@ cc_test(
 )
 
 
+cc_binary(
+  name = "diagonal_traverse_ii",
+  copts = ["-std=c++17"],
+  srcs = ["diagonal_traverse_ii.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ]
+)
+cc_test(
+  name = "diagonal_traverse_ii_test",
+  copts = ["-std=c++17"],
+  srcs = ["diagonal_traverse_ii.cpp"],
+  deps = [
+    "@googletest//:gtest_main"
+  ]
+)
+
+
 
 rust_binary(
   name = "binary_tree_pruning",
@@ -397,9 +415,3 @@ rust_test(
   edition = "2021"
 )
 
-
-rust_test(
-  name = "diagonal_traverse_ii",
-  srcs = ["diagonal_traverse_ii.rs"],
-  edition = "2021"
-)
